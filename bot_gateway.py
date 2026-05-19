@@ -5,8 +5,8 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # 配置 Config
-API_TOKEN = 'YOUR_TELEGRAM_BOT_TOKEN'
-MIDTRANS_SERVER_KEY = 'YOUR_MIDTRANS_SERVER_KEY' # Dapatkan di dashboard Midtrans (Sandbox/Production)
+API_TOKEN = '8993353829:AAFeDOCzz4hj7pGrdNScIpIYw4dGViEm7OM'
+MIDTRANS_SERVER_KEY = 'Mid-server-KXYFhEy33owLMSDacfH22hDU' # Dapatkan di dashboard Midtrans (Sandbox/Production)
 MIDTRANS_API_URL = 'https://api.sandbox.midtrans.com/v2/charge' # Gunakan api.midtrans.com jika sudah live
 
 bot = telebot.TeleBot(API_TOKEN)
