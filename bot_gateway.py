@@ -120,7 +120,7 @@ def getMessage():
 def webhook():
     bot.remove_webhook()
     # Ganti URL_SERVER_ANDA dengan url dari Render/Heroku tempat Anda menaruh bot ini
-    bot.set_webhook(url='https://URL_SERVER_ANDA.com/' + API_TOKEN)
+    bot.set_webhook(url='https://www.pythonanywhere.com/user/polay90/webapps/#tab_id_polay90_pythonanywhere_com/' + API_TOKEN)
     return "Bot Webhook Berhasil Terpasang!", 200
 
 if __name__ == "__main__":
