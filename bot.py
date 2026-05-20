@@ -89,7 +89,7 @@ def callback_query(call):
         deposit_text = (
             "🤖 *Menu Deposit / Pembayaran QRIS*\n\n"
             "1. Silakan lakukan transfer ke QRIS berikut [https://photos.app.goo.gl/tJmideDj46swUsZdA]\n"
-            "2. Kirimkan bukti transfer ke Admin (@UsernameAdmin Anda).\n"
+            "2. Kirimkan bukti transfer ke Admin (@play2026).\n"
             "3. Saldo akan ditambahkan manual oleh admin atau via sistem terintegrasi.\n\n"
             "_*Untuk simulasi trial/testing bot ini, ketik perintah `/topup 500000` untuk mengisi saldo instan._"
         )
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     print("Bot sedang berjalan...")
     bot.infinity_polling()
         # Payload data untuk Midtrans Core API (QRIS)
-        payload = {
+    payload = {
             "payment_type": "gopay", # gopay otomatis menghasilkan QRIS yang bisa di-scan semua e-wallet/m-banking
             "transaction_details": {
                 "order_id": order_id,
