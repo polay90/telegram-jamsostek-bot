@@ -185,7 +185,7 @@ def buat_pesanan():
                 bot.send_photo(message.chat.id, qris_url)
             else:
                 bot.reply_to(message, "❌ Gagal membuat QRIS. Silakan coba lagi nanti.")
-        else:
+            else:
             bot.reply_to(message, f"❌ Terjadi kesalahan sistem Payment Gateway: {data.get('status_message')}")
             
     except ValueError:
