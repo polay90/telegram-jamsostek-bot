@@ -164,14 +164,14 @@ def buat_pesanan():
 
     data = response.json()
     
-    if response.status_code == 201:
+         if response.status_code == 201:
         # Kode Anda selanjutnya di sini (maju 4 spasi dari if)
 
             # Mengambil link QRIS dari response Midtrans
             actions = data.get('actions', [])
             qris_url = next((action['url'] for action in actions if action['name'] == 'generate-qr-code'), None)
             
-    if qris_url:
+         if qris_url:
                 bot.send_message(
                     message.chat.id,
                     f"🧾 *Invoice Terbuat!*\n"
@@ -183,12 +183,12 @@ def buat_pesanan():
                 )
                 # Kirim gambar QRIS langsung ke user
                 bot.send_photo(message.chat.id, qris_url)
-    else:
+        else:
                 bot.reply_to(message, "❌ Gagal membuat QRIS. Silakan coba lagi nanti.")
-    else:
+        else:
             bot.reply_to(message, f"❌ Terjadi kesalahan sistem Payment Gateway: {data.get('status_message')}")
             
-    except ValueError:
+        except ValueError:
         bot.reply_to(message, "❌ Nominal harus berupa angka penuh tanpa titik/koma.")
 
 # 3. ENDPOINT WEBHOOK / CALLBACK (Menerima Notifikasi dari Midtrans)
