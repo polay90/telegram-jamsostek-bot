@@ -150,7 +150,7 @@ if __name__ == '__main__':
             "custom_field1": user_id # Menyimpan ID Telegram user agar terbaca saat callback sukses
         }
         
-        headers = {
+    headers = {
             "accept": "application/json",
             "content-type": "application/json",
             "authorization": f"Basic {MIDTRANS_SERVER_KEY}" # Server key biasanya di-encode base64, atau library midtrans-python menangani ini secara otomatis
