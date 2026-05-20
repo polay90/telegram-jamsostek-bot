@@ -164,7 +164,7 @@ def buat_pesanan():
 
     data = response.json()
     
-         if response.status_code == 201:
+if response.status_code == 201:
         # Kode Anda selanjutnya di sini (maju 4 spasi dari if)
 
             # Mengambil link QRIS dari response Midtrans
