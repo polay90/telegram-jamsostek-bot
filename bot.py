@@ -141,12 +141,14 @@ if __name__ == '__main__':
     print("Bot sedang berjalan...")
     bot.infinity_polling()
         # Payload data untuk Midtrans Core API (QRIS)
-    payload = {
-            "payment_type": "gopay", # gopay otomatis menghasilkan QRIS yang bisa di-scan semua e-wallet/m-banking
-            "transaction_details": {
-                "order_id": order_id,
-                "gross_amount": amount
-            },
+        payload = {
+        "transaction_details": {
+            "order_id": "ORDER-12345",
+            "gross_amount": 100000
+        }, # <-- Pastikan ada koma jika ada elemen setelahnya
+        "custom_field1": user_id # <-- Sekarang baris ini tidak akan error
+    }
+
             "custom_field1": user_id # Menyimpan ID Telegram user agar terbaca saat callback sukses
         # Bagian akhir dari payload Anda
         "custom_field1": user_id
