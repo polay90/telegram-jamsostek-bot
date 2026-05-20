@@ -148,21 +148,24 @@ if __name__ == '__main__':
                 "gross_amount": amount
             },
             "custom_field1": user_id # Menyimpan ID Telegram user agar terbaca saat callback sukses
-        }
-        
+        # Bagian akhir dari payload Anda
+        "custom_field1": user_id
+    } # Pastikan sejajar dengan kurung buka payload di atasnya
+    
     headers = {
-            "accept": "application/json",
-            "content-type": "application/json",
-            "authorization": f"Basic {MIDTRANS_SERVER_KEY}" # Server key biasanya di-encode base64, atau library midtrans-python menangani ini secara otomatis
-        }
-        
-        # Request ke Midtrans
-        # Catatan: Untuk kemudahan, disarankan menggunakan library resmi `midtransclient` bawaan Midtrans.
-        # Ini adalah simulasi request dasar via HTTP POST:
-        response = requests.post(MIDTRANS_API_URL, json=payload, auth=(MIDTRANS_SERVER_KEY, ''))
-        data = response.json()
-        
-        if response.status_code == 201:
+        "accept": "application/json",
+        "content-type": "application/json",
+        "authorization": f"Basic {MIDTRANS_SERVER_KEY}"
+    }
+    
+    # Request ke Midtrans (Sekarang sejajar dengan headers)
+        response = requests.post(MIDTRANS_API_URL, json=payload, headers=headers)
+
+    data = response.json()
+    
+    if response.status_code == 201:
+        # Kode Anda selanjutnya di sini (maju 4 spasi dari if)
+
             # Mengambil link QRIS dari response Midtrans
             actions = data.get('actions', [])
             qris_url = next((action['url'] for action in actions if action['name'] == 'generate-qr-code'), None)
