@@ -141,13 +141,16 @@ if __name__ == '__main__':
     print("Bot sedang berjalan...")
     bot.infinity_polling()
         # Payload data untuk Midtrans Core API (QRIS)
-        payload = {
+def buat_pesanan():
+    nama = "User"
+    payload = {  # <-- BENAR: Sejajar dengan baris nama (sama-sama 4 spasi dari def)
         "transaction_details": {
-            "order_id": "ORDER-12345",
-            "gross_amount": 100000
-        }, # <-- Pastikan ada koma jika ada elemen setelahnya
-        "custom_field1": user_id # <-- Sekarang baris ini tidak akan error
+            "order_id": "ORDER-123",
+            "gross_amount": 50000
+        },
+        "custom_field1": user_id
     }
+
 
             "custom_field1": user_id # Menyimpan ID Telegram user agar terbaca saat callback sukses
         # Bagian akhir dari payload Anda
