@@ -148,14 +148,10 @@ def buat_pesanan():
             "order_id": "ORDER-123",
             "gross_amount": 50000
         },
-        "custom_field1": user_id
-    }
 
 
         "custom_field1": user_id # Menyimpan ID Telegram user agar terbaca saat callback sukses
-        # Bagian akhir dari payload Anda
-        "custom_field1": user_id
-    } # Pastikan sejajar dengan kurung buka payload di atasnya
+    }
     
     headers = {
         "accept": "application/json",
