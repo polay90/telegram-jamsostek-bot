@@ -171,7 +171,7 @@ def buat_pesanan():
             actions = data.get('actions', [])
             qris_url = next((action['url'] for action in actions if action['name'] == 'generate-qr-code'), None)
             
-            if qris_url:
+    if qris_url:
                 bot.send_message(
                     message.chat.id,
                     f"🧾 *Invoice Terbuat!*\n"
@@ -183,9 +183,9 @@ def buat_pesanan():
                 )
                 # Kirim gambar QRIS langsung ke user
                 bot.send_photo(message.chat.id, qris_url)
-            else:
+    else:
                 bot.reply_to(message, "❌ Gagal membuat QRIS. Silakan coba lagi nanti.")
-            else:
+    else:
             bot.reply_to(message, f"❌ Terjadi kesalahan sistem Payment Gateway: {data.get('status_message')}")
             
     except ValueError:
