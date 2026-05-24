@@ -2,7 +2,7 @@ import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 # GANTI DENGAN TOKEN BOT TELEGRAM ANDA
-API_TOKEN = '6031964313:AAEcdpgrPlEv6HpUPYysOICfehq5VR5eafs'
+API_TOKEN = '8783235583:AAFWQGfIW9a8ob2VJ1fm01_Ahr4fJ1OiXSw'
 bot = telebot.TeleBot(API_TOKEN)
 
 # Database sederhana di memori (Jika bot restart, saldo akan kembali ke 0)
