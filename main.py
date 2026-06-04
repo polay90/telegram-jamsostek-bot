@@ -1,6 +1,13 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+from flask import Flask
 
+app = Flask(__name__) # Variabel 'app' inilah yang dicari Vercel
+
+@app.route('/')
+def home():
+    return "Hello, Vercel!"
+    
 # GANTI DENGAN TOKEN BOT TELEGRAM ANDA
 API_TOKEN = '8783235583:AAFWQGfIW9a8ob2VJ1fm01_Ahr4fJ1OiXSw'
 bot = telebot.TeleBot(API_TOKEN)
