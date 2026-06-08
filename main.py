@@ -104,9 +104,9 @@ def callback_query(call):
             
     elif call.data == "deposit":
         deposit_text = (
-            "🤖 *Menu Deposit / Pembayaran QRIS*\n\n"
-            "1. Silakan lakukan transfer ke QRIS berikut [@play2026]\n"
-            "2. Kirimkan bukti transfer ke Admin (@play2026).\n"
+            "🤖 *Menu Deposit / Pembayaran QRIS Tidak Aktif*\n\n"
+            "1. Tidak untuk lakukan transfer ke QRIS berikut hubungi [@play2026]\n"
+            "2. Kirim pesan ke Admin (@play2026).\n"
             "3. Saldo akan ditambahkan manual oleh admin atau via sistem terintegrasi.\n\n"
             "_*Untuk untuk mengisi saldo instan._"
         )
